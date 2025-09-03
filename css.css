@@ -151,21 +151,6 @@ nav a{
 nav a:hover{
     background:rgba(128, 125, 125, 0.931)
 }
-.cta{
-    background:var(--gold);
-    color:#ffffff;
-    padding:8px 12px;
-    border-radius:10px;
-    font-weight:800
-}
-
-.menu-btn{
-    display:none;
-    background:transparent;
-    border:0;
-    color:var(--gold);
-    font-weight:800
-}
 
 /* Responsive nav */
 @media (max-width:900px){
@@ -207,11 +192,11 @@ nav a:hover{
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6); /* oscurece para mejor contraste */
+  background: rgba(0, 0, 0, 0.537); /* oscurece para mejor contraste */
 }
 
 .hero-content {
-    background:linear-gradient(190deg, #795e4f, rgba(0, 0, 0, 0.45));
+    background:linear-gradient(190deg, #795e4f);
   position: relative;
   z-index: 2;
   max-width: 800px;
@@ -228,7 +213,7 @@ nav a:hover{
 .hero h1 {
   font-size: 42px;
   font-weight: 800;
-  color: #d4af37;
+  color: rgb(233, 222, 216);
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -248,7 +233,7 @@ nav a:hover{
 }
 
 .btn {
-  background:linear-gradient(90deg, #795e4f, rgba(0, 0, 0, 0.45));
+  background:linear-gradient(90deg, rgba(0, 0, 0, 0.45));
   padding: 14px 24px;
   border-radius: 8px;
   font-weight: bold;
@@ -258,21 +243,21 @@ nav a:hover{
 }
 
 .btn:hover {
-    background:linear-gradient(90deg, #b38e2d, rgba(0, 0, 0, 0.192));
+    background:linear-gradient(90deg, rgb(147, 89, 60));
 }
 
 .btn-outline {
-    background:linear-gradient(90deg, #795e4f, rgba(0, 0, 0, 0.45));
+    background:linear-gradient(90deg, rgba(0, 0, 0, 0.45));
   padding: 12px 22px;
   border-radius: 8px;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .btn-outline:hover {
-  background:linear-gradient(90deg, #b38e2d, rgba(0, 0, 0, 0.192));
+  background:linear-gradient(90deg, rgb(147, 89, 60));
 }
 
 /* flecha abajo */
@@ -302,7 +287,7 @@ nav a:hover{
 }
 
 .menu-section {
-  background:linear-gradient(90deg, #b38e2d,#795e4f);
+  background:linear-gradient(90deg, #b38e2d);
   color: #fff;
   padding: 80px 20px;
   text-align: center;
@@ -532,12 +517,13 @@ body {
     }
 
     .info-contacto h4 {
-      margin-bottom: 15px;
+      text-align: center;
+      margin-bottom: 20px;
       color: #d4af37;
     }
 
     .info-contacto p {
-      margin: 8px 0;
+      margin: 30px 0;
     }
 
     .info-contacto i {
@@ -550,7 +536,6 @@ body {
       min-width: 350px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }
 
     iframe {
@@ -597,12 +582,6 @@ body {
     min-width: 250px;
   }
 
-  .logo {
-    background-color: #000;
-    color: #d4af37;
-    font-family: 'Georgia', serif;
-    margin-bottom: 10px;
-  }
 
   .footer-col h3 {
     color: #d4af37;
@@ -613,7 +592,7 @@ body {
   .footer-col ul {
     font-size: 0.95rem;
     color: #ccc;
-    margin: 0 0 10px;
+    margin: 0 0 35px;
   }
 
   .footer-col ul {
@@ -646,8 +625,20 @@ body {
     transition: color 0.3s;
   }
 
-  .redes-sociales a:hover {
-    color: #d4af37;
+  .fa-facebook:hover{
+    color: #405DE6;
+  }
+
+  .fa-instagram:hover{
+    color: #E1306C;
+  }
+
+  .fa-whatsapp:hover{
+    color: #25D366;
+  }
+
+  .fa-tiktok:hover{
+    color: #ff0050;
   }
 
   .footer-bottom {
@@ -657,6 +648,10 @@ body {
     padding-top: 15px;
     font-size: 0.85rem;
     color: #888;
+  }
+
+  .footer-col p {
+    margin-top: 20px;
   }
 
 
