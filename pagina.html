@@ -19,7 +19,8 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="main-container">
+    <section class="hero">
     <div class="hero-content">
     <h1>SABOR QUE BRILLA EN <br> CADA BOCADO</h1>
     <p>
@@ -44,90 +45,126 @@
       premium y técnicas gastronómicas excepcionales.
     </p>
   </div>
+</section>
+<div class="img-container">
+  <!-- Tarjetas -->
+<img src="./img/doro.png" 
+     alt="Plato especial" 
+     class="card-img"
+     onclick="openInfoModal()">
 
-  <div class="menu-grid">
-    <!-- PLATO 1 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Golden Deluxe">
-      <div class="menu-info">
-          <span class="plato">Golden Deluxe</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veniam quia quam. Pariatur nostrum, nam nisi soluta optio tempora aut quaerat blanditiis? Non fugit placeat voluptas hic dolorem delectus ipsum!</p>
-        <span class="precio">$28.900</span>
-      </div>
-    </div>
+<!-- Modal con información -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeInfoModal()">&times;</span>
+    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
+    <h2>Golden Deluxe</h2>
+    <p class="parrafo">
+      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
+      Ideal para compartir en familia o con amigos. 
+    </p>
+    <p><strong>Precio:</strong> $28.900</p>
+  </div>
+</div>
 
-    <!-- PLATO 1 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Golden Deluxe">
-      <div class="menu-info">
-          <span class="plato">Golden Deluxe</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veniam quia quam. Pariatur nostrum, nam nisi soluta optio tempora aut quaerat blanditiis? Non fugit placeat voluptas hic dolorem delectus ipsum!</p>
-        <span class="precio">$28.900</span>
-      </div>
-    </div>
 
-    <!-- PLATO 1 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Golden Deluxe">
-      <div class="menu-info">
-          <span class="plato">Golden Deluxe</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veniam quia quam. Pariatur nostrum, nam nisi soluta optio tempora aut quaerat blanditiis? Non fugit placeat voluptas hic dolorem delectus ipsum!</p>
-        <span class="precio">$28.900</span>
-      </div>
-    </div>
+<!-- Tarjetas -->
+<!-- Imagen que abre el modal -->
+<img src="./img/doro.png" 
+     alt="Plato especial" 
+     class="card-img"
+     onclick="openInfoModal()">
 
-    <!-- PLATO 1 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Golden Deluxe">
-      <div class="menu-info">
-          <span class="plato">Golden Deluxe</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veniam quia quam. Pariatur nostrum, nam nisi soluta optio tempora aut quaerat blanditiis? Non fugit placeat voluptas hic dolorem delectus ipsum!</p>
-        <span class="precio">$28.900</span>
-      </div>
-    </div>
+<!-- Modal con información -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeInfoModal()">&times;</span>
+    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
+    <h2>Golden Deluxe</h2>
+    <p>
+      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
+      Ideal para compartir en familia o con amigos. 
+    </p>
+    <p><strong>Precio:</strong> $28.900</p>
+  </div>
+</div>
 
-    <!-- PLATO 1 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Golden Deluxe">
-      <div class="menu-info">
-          <span class="plato">Golden Deluxe</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veniam quia quam. Pariatur nostrum, nam nisi soluta optio tempora aut quaerat blanditiis? Non fugit placeat voluptas hic dolorem delectus ipsum!</p>
-        <span class="precio">$28.900</span>
-      </div>
-    </div>
+<!-- Tarjetas -->
+<!-- Imagen que abre el modal -->
+<img src="./img/doro.png" 
+     alt="Plato especial" 
+     class="card-img"
+     onclick="openInfoModal()">
 
-    <!-- PLATO 1 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Golden Deluxe">
-      <div class="menu-info">
-          <span class="plato">Golden Deluxe</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veniam quia quam. Pariatur nostrum, nam nisi soluta optio tempora aut quaerat blanditiis? Non fugit placeat voluptas hic dolorem delectus ipsum!</p>
-        <span class="precio">$28.900</span>
-      </div>
-    </div>
+<!-- Modal con información -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeInfoModal()">&times;</span>
+    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
+    <h2>Golden Deluxe</h2>
+    <p>
+      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
+      Ideal para compartir en familia o con amigos. 
+    </p>
+    <p><strong>Precio:</strong> $28.900</p>
+  </div>
+</div>
 
-    <!-- PLATO 2 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Oro Negro">
-      <div class="menu-info">
-        <span class="plato">Oro Negro</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fugit repellendus nemo neque repellat quam nulla, doloremque, perferendis quod quaerat recusandae nostrum libero nobis vel possimus expedita consequuntur maiores adipisci!</p>
-        <span class="precio">$24.500</span>
-      </div>
-      
-    </div>
+<!-- Imagen que abre el modal -->
+<img src="./img/doro.png" 
+     alt="Plato especial" 
+     class="card-img"
+     onclick="openInfoModal()">
 
-    <!-- PLATO 3 -->
-    <div class="menu-card">
-      <img src="./img/food.png" alt="Royal Chicken">
-      <div class="menu-info">
-        <span class="plato">Royal Chicken</span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates nam tenetur officiis accusamus iusto ullam minus minima, natus qui aliquid autem harum, veritatis laboriosam rem. Dolorem itaque odio ipsa totam.</p>
-        <span class="precio">$21.200</span>
+<!-- Modal con información -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeInfoModal()">&times;</span>
+    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
+    <h2>Golden Deluxe</h2>
+    <p>
+      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
+      Ideal para compartir en familia o con amigos. 
+    </p>
+    <p><strong>Precio:</strong> $28.900</p>
+  </div>
+</div>
+
+<!-- Imagen que abre el modal -->
+<img src="./img/doro.png" 
+     alt="Plato especial" 
+     class="card-img"
+     onclick="openInfoModal()">
+
+<!-- Modal con información -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeInfoModal()">&times;</span>
+    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
+    <h2>Golden Deluxe</h2>
+    <p>
+      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
+      Ideal para compartir en familia o con amigos. 
+    </p>
+    <p><strong>Precio:</strong> $28.900</p>
+  </div>
+</div>
+</div>
+
+
+<!-- Modal con Carrusel -->
+<div id="popupModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="carousel">
+      <div id="slidesContainer" class="slides">
+        <!-- Aquí se inyectarán dinámicamente las imágenes -->
       </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
   </div>
-</section>
+</div>
 
   <section class="section">
     <h3>GALERÍA</h3>
@@ -136,14 +173,14 @@
       Descubre la elegancia y sofisticación que nos caracteriza. Cada rincón de D. ORO está diseñado para brindarte una experiencia única.
     </p>
 
-    <div class="galeria">
+    <div class="galeria-container">
       <div class="galeria-item">
         <img src="./img/doro.png" alt="Restaurante elegante">
         <div class="overlay">
           <h4>Restaurante</h4>
           <p>Ambiente elegante y sofisticado</p>
         </div>
-      </div>
+    </div>
 
       <div class="galeria-item">
         <img src="./img/doro.png" alt="Chef preparando comida">
@@ -195,6 +232,9 @@
     </div>
   </section>
 </section>
+  </section>
+
+  
 
   <footer>
   <div class="footer-container">
