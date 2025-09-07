@@ -46,125 +46,93 @@
     </p>
   </div>
 </section>
-<div class="img-container">
-  <!-- Tarjetas -->
-<img src="./img/doro.png" 
-     alt="Plato especial" 
-     class="card-img"
-     onclick="openInfoModal()">
-
-<!-- Modal con información -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeInfoModal()">&times;</span>
-    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
-    <h2>Golden Deluxe</h2>
-    <p class="parrafo">
-      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
-      Ideal para compartir en familia o con amigos. 
-    </p>
-    <p><strong>Precio:</strong> $28.900</p>
-  </div>
-</div>
 
 
-<!-- Tarjetas -->
-<!-- Imagen que abre el modal -->
-<img src="./img/doro.png" 
-     alt="Plato especial" 
-     class="card-img"
-     onclick="openInfoModal()">
+ <!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
 
-<!-- Modal con información -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeInfoModal()">&times;</span>
-    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
-    <h2>Golden Deluxe</h2>
-    <p>
-      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
-      Ideal para compartir en familia o con amigos. 
-    </p>
-    <p><strong>Precio:</strong> $28.900</p>
-  </div>
-</div>
-
-<!-- Tarjetas -->
-<!-- Imagen que abre el modal -->
-<img src="./img/doro.png" 
-     alt="Plato especial" 
-     class="card-img"
-     onclick="openInfoModal()">
-
-<!-- Modal con información -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeInfoModal()">&times;</span>
-    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
-    <h2>Golden Deluxe</h2>
-    <p>
-      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
-      Ideal para compartir en familia o con amigos. 
-    </p>
-    <p><strong>Precio:</strong> $28.900</p>
-  </div>
-</div>
-
-<!-- Imagen que abre el modal -->
-<img src="./img/doro.png" 
-     alt="Plato especial" 
-     class="card-img"
-     onclick="openInfoModal()">
-
-<!-- Modal con información -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeInfoModal()">&times;</span>
-    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
-    <h2>Golden Deluxe</h2>
-    <p>
-      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
-      Ideal para compartir en familia o con amigos. 
-    </p>
-    <p><strong>Precio:</strong> $28.900</p>
-  </div>
-</div>
-
-<!-- Imagen que abre el modal -->
-<img src="./img/doro.png" 
-     alt="Plato especial" 
-     class="card-img"
-     onclick="openInfoModal()">
-
-<!-- Modal con información -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeInfoModal()">&times;</span>
-    <img src="./img/doro.png" alt="Detalle del plato" class="modal-img">
-    <h2>Golden Deluxe</h2>
-    <p>
-      Este plato es una combinación especial de cortes de carne seleccionados con vegetales frescos y salsas artesanales.  
-      Ideal para compartir en familia o con amigos. 
-    </p>
-    <p><strong>Precio:</strong> $28.900</p>
-  </div>
-</div>
-</div>
-
-
-<!-- Modal con Carrusel -->
-<div id="popupModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-    <div class="carousel">
-      <div id="slidesContainer" class="slides">
-        <!-- Aquí se inyectarán dinámicamente las imágenes -->
-      </div>
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
     </div>
   </div>
-</div>
+
+
+<!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+    </div>
+  </div>
+
+<!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+    </div>
+  </div>
+
+<!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+    </div>
+  </div>
+
+<!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+    </div>
+  </div>
+
+
+<!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+    </div>
+  </div>
 
   <section class="section">
     <h3>GALERÍA</h3>

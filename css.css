@@ -131,7 +131,58 @@ header.scrolled {
   color: #d4af37;
 }
 
-/* Modal */
+/* Modal Nuevo*/
+
+ body {
+      background: #b88c00;
+      font-family: Arial, sans-serif;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .card-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card-img:hover {
+      transform: scale(1.05);
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 15px;
+      width: 400px;
+      text-align: center;
+    }
+    .modal-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 30px;
+      cursor: pointer;
+    }
 
 .modal-content h2 {
   font-size: 20px;
