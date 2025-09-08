@@ -1,3 +1,14 @@
+ const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+// creacion array
 const platos = [
   {
     id: 1,
@@ -19,28 +30,35 @@ const platos = [
     descripcion: "Jugoso pollo en salsa BBQ acompañado de ensalada fresca y papas fritas.",
     precio: "$25.000",
     imagen: "./img/doro.png"
+  },
+  {
+    id: 4,
+    titulo: "Pollo Broaster",
+    descripcion: "Jugoso pollo acompañado de ensalada y papas fritas.",
+    precio: "$25.000",
+    imagen: "./img/doro.png"
   }
 ];
 
-//Contenedor
+//contenedor
 const cardsContainer = document.getElementById("cardsContainer");
 
-//Generar cards
-platos.forEach(plato => {
-  const card = document.createElement("img");
+//generar cards
+platos.forEach(plato => {// se recibe como plato
+  const card = document.createElement("img"); //se crea una etiqueta img
   card.src = plato.imagen;
   card.alt = plato.titulo;
-  card.classList.add("card-img");
+  card.classList.add("card-img");//agrega la clase css card-img para los estilos
   card.onclick = () => openInfoModal(plato.id);
-  cardsContainer.appendChild(card);
+  cardsContainer.appendChild(card); //inserta cada tarjeta img en el contenedor
 });
 
-//Abrir modal con datos dinámicos
+//abrir modal
 function openInfoModal(id) {
-  const plato = platos.find(p => p.id === id);
+  const plato = platos.find(plater => plater.id === id);
 
   document.getElementById("modal-img").src = plato.imagen;
-  document.getElementById("modal-titulo").textContent = plato.titulo;
+  document.getElementById("modal-titulo").textContent = plato.titulo; //textContent cambia el texto interno del elemento
   document.getElementById("modal-descripcion").textContent = plato.descripcion;
   document.getElementById("modal-precio").textContent = plato.precio;
 

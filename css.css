@@ -1,3 +1,7 @@
+:root{
+  --texto-titulos: 40px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,11 +115,11 @@ header.scrolled {
 }
 .card {
   width: 250px;
-  background: #fff;
+  background-color: #b38e2d;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 20px;
+  margin-top: 0px;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -138,11 +142,13 @@ header.scrolled {
       font-family: Arial, sans-serif;
     }
     .cards {
+      background-color: #b38e2d;
+      margin-top: -0px;
+      padding: 7px;
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      margin-top: 20px;
     }
     .card-img {
       width: 250px;
