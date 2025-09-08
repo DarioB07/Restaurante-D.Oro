@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú</title>
+  <style>
+    body {
+      background: #b88c00;
+      font-family: Arial, sans-serif;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .card-img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card-img:hover {
+      transform: scale(1.05);
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 15px;
+      width: 400px;
+      text-align: center;
+    }
+    .modal-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor de Cards -->
+  <div id="cardsContainer" class="cards"></div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+    </div>
+  </div>
+
+  <script>
+    // 📌 Datos de los platos
+    const platos = [
+      {
+        id: 1,
+        titulo: "Golden Deluxe",
+        descripcion: "Cortes de carne seleccionados con vegetales frescos y salsas artesanales.",
+        precio: "$28.900",
+        imagen: "./img/doro.png"
+      },
+      {
+        id: 2,
+        titulo: "Parrilla Mixta",
+        descripcion: "Variedad de carnes a la parrilla con papas criollas y guacamole casero.",
+        precio: "$32.500",
+        imagen: "./img/parrilla.png"
+      },
+      {
+        id: 3,
+        titulo: "Pollo BBQ",
+        descripcion: "Jugoso pollo en salsa BBQ acompañado de ensalada fresca y papas fritas.",
+        precio: "$25.000",
+        imagen: "./img/pollo.png"
+      }
+    ];
+
+    // 📌 Contenedor
+    const cardsContainer = document.getElementById("cardsContainer");
+
+    // 📌 Generar cards
+    platos.forEach(plato => {
+      const card = document.createElement("img");
+      card.src = plato.imagen;
+      card.alt = plato.titulo;
+      card.classList.add("card-img");
+      card.onclick = () => openInfoModal(plato.id);
+      cardsContainer.appendChild(card);
+    });
+
+    // 📌 Abrir modal con datos dinámicos
+    function openInfoModal(id) {
+      const plato = platos.find(p => p.id === id);
+
+      document.getElementById("modal-img").src = plato.imagen;
+      document.getElementById("modal-titulo").textContent = plato.titulo;
+      document.getElementById("modal-descripcion").textContent = plato.descripcion;
+      document.getElementById("modal-precio").textContent = plato.precio;
+
+      document.getElementById("infoModal").style.display = "block";
+    }
+
+    // 📌 Cerrar modal
+    function closeInfoModal() {
+      document.getElementById("infoModal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

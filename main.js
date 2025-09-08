@@ -1,69 +1,73 @@
-const header = document.getElementById("header");
+ const header = document.getElementById("header");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 40) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+// creacion array
+const platos = [
+  {
+    id: 1,
+    titulo: "Golden Deluxe",
+    descripcion: "Cortes de carne seleccionados con vegetales frescos y salsas artesanales.",
+    precio: "$28.900",
+    imagen: "./img/doro.png"
+  },
+  {
+    id: 2,
+    titulo: "Parrilla Mixta",
+    descripcion: "Variedad de carnes a la parrilla con papas criollas y guacamole casero.",
+    precio: "$32.500",
+    imagen: "./img/doro.png"
+  },
+  {
+    id: 3,
+    titulo: "Pollo BBQ",
+    descripcion: "Jugoso pollo en salsa BBQ acompañado de ensalada fresca y papas fritas.",
+    precio: "$25.000",
+    imagen: "./img/doro.png"
+  },
+  {
+    id: 4,
+    titulo: "Pollo Broaster",
+    descripcion: "Jugoso pollo acompañado de ensalada y papas fritas.",
+    precio: "$25.000",
+    imagen: "./img/doro.png"
   }
+];
+
+//contenedor
+const cardsContainer = document.getElementById("cardsContainer");
+
+//generar cards
+platos.forEach(plato => {// se recibe como plato
+  const card = document.createElement("img"); //se crea una etiqueta img
+  card.src = plato.imagen;
+  card.alt = plato.titulo;
+  card.classList.add("card-img");//agrega la clase css card-img para los estilos
+  card.onclick = () => openInfoModal(plato.id);
+  cardsContainer.appendChild(card); //inserta cada tarjeta img en el contenedor
 });
 
-let currentImages = [];
-let slideIndex = 0;
+//abrir modal
+function openInfoModal(id) {
+  const plato = platos.find(plater => plater.id === id);
 
-function openModal(cardId) {
-  document.getElementById("popupModal").style.display = "block";
+  document.getElementById("modal-img").src = plato.imagen;
+  document.getElementById("modal-titulo").textContent = plato.titulo; //textContent cambia el texto interno del elemento
+  document.getElementById("modal-descripcion").textContent = plato.descripcion;
+  document.getElementById("modal-precio").textContent = plato.precio;
 
-  // Asigna imágenes dinámicas según la tarjeta
-  if (cardId === 1) {
-    currentImages = ["img/doro1.png", "img/doro1b.png", "img/doro1c.png"];
-  } else if (cardId === 2) {
-    currentImages = ["img/doro2.png", "img/doro2b.png", "img/doro2c.png", "img/doro2d.png"];
-  } else if (cardId === 3) {
-    currentImages = ["img/doro3.png", "img/doro3b.png"];
-  }
-
-  // Contenedor de imágenes
-  const slidesContainer = document.getElementById("slidesContainer");
-  slidesContainer.innerHTML = ""; // Limpia las imágenes anteriores
-
-  // Insertar todas las imágenes dinámicamente
-  currentImages.forEach((src, index) => {
-    const img = document.createElement("img");
-    img.src = src;
-    img.classList.add("slide");
-    if (index !== 0) img.style.display = "none"; // Ocultar todas menos la primera
-    slidesContainer.appendChild(img);
-  });
-
-  slideIndex = 0;
-}
-
-function changeSlide(n) {
-  const slides = document.querySelectorAll("#slidesContainer img");
-  slides[slideIndex].style.display = "none"; // Oculta la actual
-  slideIndex = (slideIndex + n + slides.length) % slides.length; // Controla el índice
-  slides[slideIndex].style.display = "block"; // Muestra la nueva
-}
-
-function closeModal() {
-  document.getElementById("popupModal").style.display = "none";
-}
-
-function openInfoModal() {
   document.getElementById("infoModal").style.display = "block";
 }
 
+//Cerrar modal
 function closeInfoModal() {
   document.getElementById("infoModal").style.display = "none";
-}
-
-// Cerrar si se hace clic fuera del modal
-window.onclick = function (event) {
-  const modal = document.getElementById("infoModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
 }
 
 
