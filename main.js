@@ -1,12 +1,12 @@
- const header = document.getElementById("header");
+const header = document.getElementById("header");
 
-    window.addEventListener("scroll", function() {
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    });
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
 
 // creacion array
 const platos = [
@@ -37,14 +37,24 @@ const platos = [
     descripcion: "Jugoso pollo acompañado de ensalada y papas fritas.",
     precio: "$25.000",
     imagen: "./img/doro.png"
+  },
+  {
+    id: 5,
+    titulo: "Ensalada",
+    descripcion: "Ensalada y papas fritas.",
+    precio: "$25.000",
+    imagen: "./img/doro.png"
   }
 ];
 
 //contenedor
-const cardsContainer = document.getElementById("cardsContainer");
+const cardsContainer = document.querySelector("#cardsContainer"); //con querySelector puedo cambiar fácilmente la selección 
+// si algún día decido usar una clase en lugar de un id
 
 //generar cards
-platos.forEach(plato => {// se recibe como plato
+platos.forEach(plato => {// se recibe como plato.... Se usa cuando quieres recorrer un array 
+// y hacer algo con cada elemento (ejemplo: modificar el DOM y el Map Recorre un array igual que forEach, 
+// pero devuelve un NUEVO array
   const card = document.createElement("img"); //se crea una etiqueta img
   card.src = plato.imagen;
   card.alt = plato.titulo;
@@ -55,7 +65,23 @@ platos.forEach(plato => {// se recibe como plato
 
 //abrir modal
 function openInfoModal(id) {
-  const plato = platos.find(plater => plater.id === id);
+  const plato = platos.find(plater => plater.id === id); //El metodo find() es una forma mas corta que hacer un ciclo for
+
+  //i++ es i = i + 1
+  //const dario = platos[0]//i = 0
+  //const dari = platos[1]//i = 1
+  //const dar2 = platos[2]//i = 2
+  //const dari3 = platos[3]//i = 3
+  //console.log(dario)
+  //let plato
+  //for(let i = 0; i <= platos.length; i++){
+  //console.log(platos[i], "Hola")
+  //console.log(platos[i].id, "numero")//numero
+  //console.log(id === platos[i].id)//booleano
+  //if(id === platos[i].id){
+  //plato = platos[i]
+  //}
+  //}
 
   document.getElementById("modal-img").src = plato.imagen;
   document.getElementById("modal-titulo").textContent = plato.titulo; //textContent cambia el texto interno del elemento
