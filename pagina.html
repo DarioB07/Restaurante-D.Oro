@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Libertinus+Keyboard&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Libertinus+Keyboard&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
   <header id="header">
     <img class="img-logo" src="./img/food.png" alt="Logo restaurante">
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Menú</a>
-      <a href="#">Galería</a>
-      <a href="#">Contacto</a>
-      <a href="#">Redes</a>
-      <a href="#">Reservar</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#redes">Redes</a>
+      <a href="#como-llegar">Como llegar</a>
     </nav>
   </header>
 
-  <section class="main-container">
+  <section id="inicio" class="main-container">
     <section class="hero">
     <div class="hero-content">
     <h1>SABOR QUE BRILLA EN <br> CADA BOCADO</h1>
@@ -28,9 +35,12 @@
       elegante. En <b>D. ORO</b>, cada ingrediente cuenta una historia de sabor
       excepcional.
     </p>
-    <div class="hero-buttons">
-      <a href="#menu" class="btn">Ver Menú</a>
-      <a href="#ubicacion" class="btn-outline">Cómo llegar</a>
+    <div class="elementor-widget-container">
+      <a class="elementor-button elementor-button-link elementor-size-lg elementor-animation-grow">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">¡Mira ahora!</span>
+					</span>
+					</a>
     </div>
     <div class="scroll-down">↓</div>
   </div>
@@ -134,9 +144,8 @@
     </div>
   </div>
 
-  <section class="section">
+  <section id="galeria" class="section">
     <h3>GALERÍA</h3>
-    <h2>Momentos Dorados</h2>
     <p class="subtitulo">
       Descubre la elegancia y sofisticación que nos caracteriza. Cada rincón de D. ORO está diseñado para brindarte una experiencia única.
     </p>
@@ -153,16 +162,16 @@
       <div class="galeria-item">
         <img src="./img/doro.png" alt="Chef preparando comida">
         <div class="overlay">
-          <h4>Cocina</h4>
-          <p>Chef preparando hamburguesas gourmet</p>
+          <h4>Lesly</h4>
+          <p>hamburguesas gourmet</p>
         </div>
       </div>
 
       <div class="galeria-item">
         <img src="./img/doro.png" alt="Chef preparando comida">
         <div class="overlay">
-          <h4>Cocina</h4>
-          <p>Chef preparando hamburguesas gourmet</p>
+          <h4>Dario</h4>
+          <p>Chef</p>
         </div>
       </div>
 
@@ -177,9 +186,8 @@
   </section>
 
 
-  <section>
+  <section id="como-llegar" id="contacto">
     <h3>CONTACTO</h3>
-    <h2>Encuéntranos</h2>
     <p class="subtitulo">Estamos ubicados en el corazón de la ciudad, listos para brindarte una experiencia gastronómica inolvidable.</p>
 
     <div class="contacto-container">
@@ -208,13 +216,12 @@
   <div class="footer-container">
     <!-- Logo y descripción -->
     <div class="footer-col">
-      <img class="img-logo" src="./img/food.png" alt="Logo restaurante">
+      <img class="img-logo2" src="./img/food.png" alt="Logo restaurante">
       <p>
         "Sabores que crean momentos inolvidables"
       </p>
-      <div class="redes-sociales">
-        <a href="https://www.facebook.com/dariofernando.burbanohernandez.1?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/d_orofood?igsh=NXRranI4bWpsMWc2" target="_blank"><i class="fab fa-instagram"></i></a>
+      <div id="redes" class="redes-sociales">
+        <a href="https://www.facebook.com/dariofernando.burbanohernandez.1?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>        <a href="https://www.instagram.com/d_orofood?igsh=NXRranI4bWpsMWc2" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/message/LKBT5TG6SKVZA1" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.tiktok.com/@d.oro.food?_t=ZS-8zZ8lrzO8Rj&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
@@ -234,8 +241,8 @@
     </div>
 
     <!-- Información de contacto -->
-    <div class="footer-col">
-      <h3>Contacto</h3>
+    <div id="contacto" class="footer-col">
+      <h3>Direccion</h3>
       <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle 3 # 8-43 barrio el comercio, El Tambo Nariño</p>
       <p><i class="fas fa-phone"></i> +57 310 469 4357</p>
       <p><i class="fas fa-envelope"></i> fooddoro067@gmail.com</p>
