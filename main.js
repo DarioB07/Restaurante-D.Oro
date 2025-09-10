@@ -77,19 +77,19 @@ const cardsContainer = document.querySelector("#cardsContainer"); //con querySel
 //platos.forEach(plato => {// se recibe como plato.... Se usa cuando quieres recorrer un array 
 // y hacer algo con cada elemento (ejemplo: modificar el DOM y el Map Recorre un array igual que forEach, 
 // pero devuelve un NUEVO array
-  //const card = document.createElement("img"); //se crea una etiqueta img
-  //card.id = plato.id;
-  //card.src = plato.imagen;
-  //card.alt = plato.titulo;
-  //card.classList.add("card-img");//agrega la clase css card-img para los estilos
-  //card.onclick = () => openInfoModal(plato.id);
-  //cardsContainer.appendChild(card); //inserta cada tarjeta img en el contenedor
+//const card = document.createElement("img"); //se crea una etiqueta img
+//card.id = plato.id;
+//card.src = plato.imagen;
+//card.alt = plato.titulo;
+//card.classList.add("card-img");//agrega la clase css card-img para los estilos
+//card.onclick = () => openInfoModal(plato.id);
+//cardsContainer.appendChild(card); //inserta cada tarjeta img en el contenedor
 //});
 
 
 cardsContainer.innerHTML = platos.map(plato => {
   return `<img id="${plato.id}" src="${plato.imagen}" alt="${plato.alt}" class="card-img" onclick=openInfoModal(${plato.id})>`
-}  
+}
 ).join('')
 
 // `
