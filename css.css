@@ -13,6 +13,77 @@ html {
 }
 
 /* Header base */
+#header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Menú en desktop */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: gold;
+}
+
+/* Hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #b38e2d;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 928px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #b38e2d;
+    position: absolute;
+    top: 70px;   /* se despliega debajo del header */
+    width: 20%;
+    text-align: center;
+    padding: 15px 0;
+    gap: 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+/* Header base */
 header {
   position: fixed;
   top: 0;
@@ -90,8 +161,8 @@ header {
 /* Header inicial */
 
 .img-logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 100px;
 }
 
@@ -156,6 +227,7 @@ header.scrolled {
       justify-content: center;
     }
     .card-img {
+
       width: 250px;
       height: 250px;
       object-fit: cover;

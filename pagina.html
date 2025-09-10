@@ -1,262 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Libertinus+Keyboard&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Libertinus+Keyboard&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asimovian&family=Libertinus+Keyboard&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asimovian&family=Libertinus+Keyboard&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
 </head>
+
 <body>
   <header id="header">
     <img class="img-logo" src="./img/food.png" alt="Logo restaurante">
-    <nav>
+
+     <!-- Menú hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-menu" id="nav-menu">
       <a href="#inicio">Inicio</a>
       <a href="#menu">Menú</a>
       <a href="#galeria">Galería</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#redes">Redes</a>
       <a href="#como-llegar">Como llegar</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <section id="inicio" class="main-container">
     <section class="hero">
-    <div class="hero-content">
-    <h1>SABOR QUE BRILLA EN <br> CADA BOCADO</h1>
-    <p>
-      Descubre la perfecta combinación entre hamburguesas gourmet y ambiente
-      elegante. En <b>D. ORO</b>, cada ingrediente cuenta una historia de sabor
-      excepcional.
-    </p>
-    <div class="elementor-widget-container">
-      <a class="elementor-button elementor-button-link elementor-size-lg elementor-animation-grow">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">¡Mira ahora!</span>
-					</span>
-					</a>
-    </div>
-    <div class="scroll-down">↓</div>
-  </div>
-</section>
-
-<section id="menu" class="menu-section">
-  <div class="menu-header">
-    <h4>NUESTRAS ESPECIALIDADES</h4>
-    <h2>Platos Destacados</h2>
-    <p>
-      Cada hamburguesa es una obra maestra culinaria, preparada con ingredientes 
-      premium y técnicas gastronómicas excepcionales.
-    </p>
-  </div>
-</section>
-
-
- <!-- Contenedor de Cards -->
-  <div id="cardsContainer" class="cards"></div>
-
-  <!-- Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeInfoModal()">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descripcion"></p>
-      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
-    </div>
-  </div>
-
-
-<!-- Contenedor de Cards -->
-  <div id="cardsContainer" class="cards"></div>
-
-  <!-- Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeInfoModal()">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descripcion"></p>
-      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
-    </div>
-  </div>
-
-<!-- Contenedor de Cards -->
-  <div id="cardsContainer" class="cards"></div>
-
-  <!-- Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeInfoModal()">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descripcion"></p>
-      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
-    </div>
-  </div>
-
-<!-- Contenedor de Cards -->
-  <div id="cardsContainer" class="cards"></div>
-
-  <!-- Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeInfoModal()">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descripcion"></p>
-      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
-    </div>
-  </div>
-
-<!-- Contenedor de Cards -->
-  <div id="cardsContainer" class="cards"></div>
-
-  <!-- Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeInfoModal()">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descripcion"></p>
-      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
-    </div>
-  </div>
-
-
-<!-- Contenedor de Cards -->
-  <div id="cardsContainer" class="cards"></div>
-
-  <!-- Modal -->
-  <div id="infoModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeInfoModal()">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descripcion"></p>
-      <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
-    </div>
-  </div>
-
-  <section id="galeria" class="section">
-    <h3>GALERÍA</h3>
-    <p class="subtitulo">
-      Descubre la elegancia y sofisticación que nos caracteriza. Cada rincón de D. ORO está diseñado para brindarte una experiencia única.
-    </p>
-
-    <div class="galeria-container">
-      <div class="galeria-item">
-        <img src="./img/doro.png" alt="Restaurante elegante">
-        <div class="overlay">
-          <h4>Restaurante</h4>
-          <p>Ambiente elegante y sofisticado</p>
+      <div class="hero-content">
+        <h1>SABOR QUE BRILLA EN <br> CADA BOCADO</h1>
+        <p>
+          Descubre la perfecta combinación entre hamburguesas gourmet y ambiente
+          elegante. En <b>D. ORO</b>, cada ingrediente cuenta una historia de sabor
+          excepcional.
+        </p>
+        <div class="elementor-widget-container">
+          <a class="elementor-button elementor-button-link elementor-size-lg elementor-animation-grow">
+            <span class="elementor-button-content-wrapper">
+              <span class="elementor-button-text">¡Mira ahora!</span>
+            </span>
+          </a>
         </div>
-    </div>
-
-      <div class="galeria-item">
-        <img src="./img/doro.png" alt="Chef preparando comida">
-        <div class="overlay">
-          <h4>Lesly</h4>
-          <p>hamburguesas gourmet</p>
-        </div>
+        <div class="scroll-down">↓</div>
       </div>
+    </section>
 
-      <div class="galeria-item">
-        <img src="./img/doro.png" alt="Chef preparando comida">
-        <div class="overlay">
-          <h4>Dario</h4>
-          <p>Chef</p>
-        </div>
+    <section id="menu" class="menu-section">
+      <div class="menu-header">
+        <h4>NUESTRAS ESPECIALIDADES</h4>
+        <h2>Platos Destacados</h2>
+        <p>
+          Cada hamburguesa es una obra maestra culinaria, preparada con ingredientes
+          premium y técnicas gastronómicas excepcionales.
+        </p>
       </div>
+    </section>
 
-      <div class="galeria-item">
-        <img src="./img/doro.png" alt="Bar moderno">
-        <div class="overlay">
-          <h4>Bar</h4>
-          <p>Cócteles y bebidas exclusivas</p>
-        </div>
+
+    <!-- Contenedor de Cards -->
+    <div id="cardsContainer" class="cards"></div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInfoModal()">&times;</span>
+        <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
       </div>
     </div>
+
+
+    <!-- Contenedor de Cards -->
+    <div id="cardsContainer" class="cards"></div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInfoModal()">&times;</span>
+        <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+      </div>
+    </div>
+
+    <!-- Contenedor de Cards -->
+    <div id="cardsContainer" class="cards"></div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInfoModal()">&times;</span>
+        <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+      </div>
+    </div>
+
+    <!-- Contenedor de Cards -->
+    <div id="cardsContainer" class="cards"></div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInfoModal()">&times;</span>
+        <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+      </div>
+    </div>
+
+    <!-- Contenedor de Cards -->
+    <div id="cardsContainer" class="cards"></div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInfoModal()">&times;</span>
+        <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+      </div>
+    </div>
+
+
+    <!-- Contenedor de Cards -->
+    <div id="cardsContainer" class="cards"></div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeInfoModal()">&times;</span>
+        <img id="modal-img" class="modal-img" src="" alt="Detalle del plato">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descripcion"></p>
+        <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+      </div>
+    </div>
+
+    <section id="galeria" class="section">
+      <h3>GALERÍA</h3>
+      <p class="subtitulo">
+        Descubre la elegancia y sofisticación que nos caracteriza. Cada rincón de D. ORO está diseñado para brindarte
+        una experiencia única.
+      </p>
+
+      <div class="galeria-container">
+        <div class="galeria-item">
+          <img src="./img/doro.png" alt="Restaurante elegante">
+          <div class="overlay">
+            <h4>Restaurante</h4>
+            <p>Ambiente elegante y sofisticado</p>
+          </div>
+        </div>
+
+        <div class="galeria-item">
+          <img src="./img/doro.png" alt="Chef preparando comida">
+          <div class="overlay">
+            <h4>Lesly</h4>
+            <p>hamburguesas gourmet</p>
+          </div>
+        </div>
+
+        <div class="galeria-item">
+          <img src="./img/doro.png" alt="Chef preparando comida">
+          <div class="overlay">
+            <h4>Dario</h4>
+            <p>Chef</p>
+          </div>
+        </div>
+
+        <div class="galeria-item">
+          <img src="./img/doro.png" alt="Bar moderno">
+          <div class="overlay">
+            <h4>Bar</h4>
+            <p>Cócteles y bebidas exclusivas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="como-llegar" id="contacto">
+      <h3>CONTACTO</h3>
+      <p class="subtitulo">Estamos ubicados en el corazón de la ciudad, listos para brindarte una experiencia
+        gastronómica inolvidable.</p>
+
+      <div class="contacto-container">
+        <!-- Información de contacto -->
+        <div class="info-contacto">
+          <h4>Información de Contacto</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle 3 # 8-43 barrio el comercio, El Tambo Nariño</p>
+          <p><i class="fas fa-phone"></i> Teléfono: +57 310 469 4357</p>
+          <p><i class="fas fa-envelope"></i> Correo: fooddoro067@gmail.com</p>
+          <p><i class="fas fa-clock"></i> Horarios: Lun - Vi: 09:00 am a 10:00 pm, Sab: 07:00 am a 10:00pm, Dom: 09:00
+            am a 10:00 pm</p>
+        </div>
+
+        <!-- Mapa -->
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.3056012488466!2d-77.3953645429124!3d1.4094408533238403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ec35896fc8677%3A0x15b888bfc095284d!2sCl.%203%20%23%208-43%2C%20El%20Tambo%2C%20Nari%C3%B1o!5e0!3m2!1ses!2sco!4v1756931262775!5m2!1ses!2sco"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </section>
   </section>
 
 
-  <section id="como-llegar" id="contacto">
-    <h3>CONTACTO</h3>
-    <p class="subtitulo">Estamos ubicados en el corazón de la ciudad, listos para brindarte una experiencia gastronómica inolvidable.</p>
-
-    <div class="contacto-container">
-      <!-- Información de contacto -->
-      <div class="info-contacto">
-        <h4>Información de Contacto</h4>
-        <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle 3 # 8-43 barrio el comercio, El Tambo Nariño</p>
-        <p><i class="fas fa-phone"></i> Teléfono: +57 310 469 4357</p>
-        <p><i class="fas fa-envelope"></i> Correo: fooddoro067@gmail.com</p>
-        <p><i class="fas fa-clock"></i> Horarios: Lun - Vi: 09:00 am a 10:00 pm, Sab: 07:00 am a 10:00pm, Dom: 09:00 am a 10:00 pm</p>
-      </div>
-
-      <!-- Mapa -->
-      <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.3056012488466!2d-77.3953645429124!3d1.4094408533238403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2ec35896fc8677%3A0x15b888bfc095284d!2sCl.%203%20%23%208-43%2C%20El%20Tambo%2C%20Nari%C3%B1o!5e0!3m2!1ses!2sco!4v1756931262775!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </iframe>
-      </div>
-    </div>
-  </section>
-</section>
-  </section>
-
-  
 
   <footer>
-  <div class="footer-container">
-    <!-- Logo y descripción -->
-    <div class="footer-col">
-      <img class="img-logo2" src="./img/food.png" alt="Logo restaurante">
-      <p>
-        "Sabores que crean momentos inolvidables"
-      </p>
-      <div id="redes" class="redes-sociales">
-        <a href="https://www.facebook.com/dariofernando.burbanohernandez.1?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>        <a href="https://www.instagram.com/d_orofood?igsh=NXRranI4bWpsMWc2" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/message/LKBT5TG6SKVZA1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.tiktok.com/@d.oro.food?_t=ZS-8zZ8lrzO8Rj&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <div class="footer-container">
+      <!-- Logo y descripción -->
+      <div class="footer-col">
+        <img class="img-logo2" src="./img/food.png" alt="Logo restaurante">
+        <p>
+          "Sabores que crean momentos inolvidables"
+        </p>
+        <div id="redes" class="redes-sociales">
+          <a href="https://www.facebook.com/dariofernando.burbanohernandez.1?locale=es_LA" target="_blank"><i
+              class="fab fa-facebook"></i></a> <a href="https://www.instagram.com/d_orofood?igsh=NXRranI4bWpsMWc2"
+            target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/message/LKBT5TG6SKVZA1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@d.oro.food?_t=ZS-8zZ8lrzO8Rj&_r=1" target="_blank"><i
+              class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="footer-col">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Información de contacto -->
+      <div id="contacto" class="footer-col">
+        <h3>Direccion</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle 3 # 8-43 barrio el comercio, El Tambo Nariño</p>
+        <p><i class="fas fa-phone"></i> +57 310 469 4357</p>
+        <p><i class="fas fa-envelope"></i> fooddoro067@gmail.com</p>
       </div>
     </div>
 
-    <!-- Enlaces rápidos -->
-    <div class="footer-col">
-      <h3>Enlaces Rápidos</h3>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#menu">Menú</a></li>
-        <li><a href="#platos">Platos Destacados</a></li>
-        <li><a href="#comentarios">Comentarios</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <!-- Derechos reservados -->
+    <div class="footer-bottom">
+      <p>© 2025 D. ORO. Todos los derechos reservados.</p>
     </div>
+  </footer>
 
-    <!-- Información de contacto -->
-    <div id="contacto" class="footer-col">
-      <h3>Direccion</h3>
-      <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle 3 # 8-43 barrio el comercio, El Tambo Nariño</p>
-      <p><i class="fas fa-phone"></i> +57 310 469 4357</p>
-      <p><i class="fas fa-envelope"></i> fooddoro067@gmail.com</p>
-    </div>
-  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Derechos reservados -->
-  <div class="footer-bottom">
-    <p>© 2025 D. ORO. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<script src="./main.js"></script>
+  <script src="./main.js"></script>
 </body>
+
 </html>

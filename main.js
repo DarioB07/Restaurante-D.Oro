@@ -22,7 +22,7 @@ const platos = [
     titulo: "Parrilla Mixta",
     descripcion: "Variedad de carnes a la parrilla con papas criollas y guacamole casero.",
     precio: "$32.500",
-    imagen: "./img/doro.png"
+    imagen: "./img/food.png"
   },
   {
     id: 3,
@@ -38,33 +38,11 @@ const platos = [
     precio: "$25.000",
     imagen: "./img/doro.png"
   },
-  {
-    id: 5,
-    titulo: "Ensalada",
-    descripcion: "Ensalada y papas fritas.",
-    precio: "$25.000",
-    imagen: "./img/doro.png"
-  }
 ];
-
-//contenedor
-const cardsContainer = document.querySelector("#cardsContainer"); //con querySelector puedo cambiar fácilmente la selección 
-// si algún día decido usar una clase en lugar de un id
-
-//generar cards
-platos.forEach(plato => {// se recibe como plato.... Se usa cuando quieres recorrer un array 
-// y hacer algo con cada elemento (ejemplo: modificar el DOM y el Map Recorre un array igual que forEach, 
-// pero devuelve un NUEVO array
-  const card = document.createElement("img"); //se crea una etiqueta img
-  card.src = plato.imagen;
-  card.alt = plato.titulo;
-  card.classList.add("card-img");//agrega la clase css card-img para los estilos
-  card.onclick = () => openInfoModal(plato.id);
-  cardsContainer.appendChild(card); //inserta cada tarjeta img en el contenedor
-});
 
 //abrir modal
 function openInfoModal(id) {
+  console.log('id', id)
   const plato = platos.find(plater => plater.id === id); //El metodo find() es una forma mas corta que hacer un ciclo for
 
   //i++ es i = i + 1
@@ -91,10 +69,45 @@ function openInfoModal(id) {
   document.getElementById("infoModal").style.display = "block";
 }
 
+//contenedor
+const cardsContainer = document.querySelector("#cardsContainer"); //con querySelector puedo cambiar fácilmente la selección 
+// si algún día decido usar una clase en lugar de un id
+
+//generar cards
+//platos.forEach(plato => {// se recibe como plato.... Se usa cuando quieres recorrer un array 
+// y hacer algo con cada elemento (ejemplo: modificar el DOM y el Map Recorre un array igual que forEach, 
+// pero devuelve un NUEVO array
+  //const card = document.createElement("img"); //se crea una etiqueta img
+  //card.id = plato.id;
+  //card.src = plato.imagen;
+  //card.alt = plato.titulo;
+  //card.classList.add("card-img");//agrega la clase css card-img para los estilos
+  //card.onclick = () => openInfoModal(plato.id);
+  //cardsContainer.appendChild(card); //inserta cada tarjeta img en el contenedor
+//});
+
+
+cardsContainer.innerHTML = platos.map(plato => {
+  return `<img id="${plato.id}" src="${plato.imagen}" alt="${plato.alt}" class="card-img" onclick=openInfoModal(${plato.id})>`
+}  
+).join('')
+
+// `
+//   <img id="1" src="./img/doro.png" alt="Dario" class="card-img" onclick=openInfoModal(1)>
+// `
+
 //Cerrar modal
 function closeInfoModal() {
   document.getElementById("infoModal").style.display = "none";
 }
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
 
 
 
