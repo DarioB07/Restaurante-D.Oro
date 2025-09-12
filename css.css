@@ -1,8 +1,14 @@
 :root {
   --title-text: 40px;
   --main-color: gold;
-  --background: #b32d2d;
+  --background: #9f753e;
   --text-color1: #fff; 
+  --text-color2: rgb(212, 175, 55);/*Nueva var()*/
+  --text-size: 42px;
+  --subtitle: 20px;
+  --padding: 18px;
+  --overlay: 20px;
+  --overlay2: 15px;
 }
 
 * {
@@ -35,7 +41,7 @@ html {
 }
 
 .nav-menu a {
-  color: white;
+  color: var(--text-color1);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -210,7 +216,7 @@ header.scrolled {
 }
 .price {
   font-weight: bold;
-  color: #d4af37;
+  color: var(--text-color2);
 }
 
 /* Modal Nuevo*/
@@ -315,7 +321,7 @@ body {
 
 .modal-content {
   color: #000;
-  background: #fff;
+  background: #e6c762;
   margin: 10% auto;
   padding: 15px;
   width: 40%;
@@ -383,7 +389,7 @@ nav a:hover::after {
 .logo {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  color: #d4af37;
+  color: var(--text-color2);
   letter-spacing: 2px;
   font-size: 22px;
 }
@@ -404,7 +410,7 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(128, 125, 125, 0.931);
+  background: rgba(255, 255, 255, 0.931);
 }
 
 /* Responsive nav */
@@ -472,8 +478,8 @@ nav a:hover {
 }
 
 .hero h4 {
-  color: #d4af37;
-  font-size: 18px;
+  color: var(--text-color2);
+  font-size: var(--subtitle);
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
@@ -493,7 +499,7 @@ nav a:hover {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: 18px;
+  font-size: var(--subtitle);
   color: #ddd;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -537,7 +543,7 @@ nav a:hover {
 /* flecha abajo */
 .scroll-down {
   font-size: 40px;
-  color: #d4af37;
+  color: var(--text-color2);
   animation: bounce 2s infinite;
 }
 
@@ -566,9 +572,11 @@ nav a:hover {
 }
 
 .section {
+  padding: var(--padding);
   background-color: #a88c7d;
 }
 .section h3 {
+  font-size: var(--text-size);
   margin-top: 40px;
   text-align: center;
 }
@@ -589,8 +597,8 @@ h2 {
 }
 
 .menu-header h4 {
-  color: #ffffff;
-  font-size: 45px;
+  color: var(--text-color2);
+  font-size: var(--text-size);
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
@@ -602,7 +610,7 @@ h2 {
 }
 
 .menu-header p {
-  font-size: 18px;
+  font-size: var(--subtitle);
   color: white;
   max-width: 700px;
   margin: 0 auto 50px auto;
@@ -648,13 +656,13 @@ h2 {
 
 .menu-info .plato {
   font-weight: bold;
-  color: #d4af37;
-  font-size: 18px;
+  color: var(--text-color2);
+  font-size: var(--subtitle);
 }
 
 .menu-info .precio {
   font-weight: 800;
-  font-size: 18px;
+  font-size: var(--subtitle);
 }
 
 /* HOVER */
@@ -678,7 +686,7 @@ body {
 
 h3 {
   font-size: 32px;
-  color: #d4af37;
+  color: var(--text-color2);
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -691,12 +699,12 @@ h2 {
 p.subtitulo {
   max-width: 600px;
   margin: 0 auto 40px;
-  font-size: 48px;
+  font-size: var(--subtitle);
   color: #ccc;
 }
 
 .galeria-container {
-  padding: 30px;
+  padding: var(--padding);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
@@ -743,12 +751,12 @@ p.subtitulo {
 
 .overlay h4 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #d4af37;
+  font-size: var(--overlay);
+  color: var(--text-color2);
 }
 
 .overlay p {
-  font-size: 1rem;
+  font-size: var(--overlay2);
   color: #fff;
   margin-top: 5px;
 }
@@ -763,8 +771,8 @@ body {
 h3 {
   text-align: center;
   margin-top: 40px;
-  font-size: 45px;
-  color: #d4af37;
+  font-size: var(--text-size);
+  color: var(--text-color2);
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
@@ -779,8 +787,8 @@ p.subtitulo {
   text-align: center;
   max-width: 600px;
   margin: 0 auto 40px;
-  font-size: 1.1rem;
-  color: #ccc;
+  font-size: var(--subtitle);
+  color: #fff;
 }
 
 .contacto-container {
@@ -802,9 +810,10 @@ p.subtitulo {
 }
 
 .info-contacto h4 {
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
-  color: #d4af37;
+  color: var(--text-color2);
+  font-size: 22px;
 }
 
 .info-contacto p {
@@ -816,7 +825,7 @@ p.subtitulo {
 .info-contacto i {
   text-align: left;
   margin-right: 10px;
-  color: #d4af37;
+  color: var(--text-color2);
 }
 
 .mapa {
@@ -844,15 +853,15 @@ iframe {
 }
 
 .redes a:hover {
-  color: #d4af37;
+  color: var(--text-color2);
 }
 
 /* Footer */
 
 footer {
-  background: #000;
+  background: #ad9159;
   color: #fff;
-  padding: 50px 20px 20px;
+  padding: var(--padding);
 }
 
 .footer-container {
@@ -870,8 +879,9 @@ footer {
 }
 
 .footer-col h3 {
+  font-size: var(--text-size);
   text-align: left;
-  color: #d4af37;
+  color: var(--text-color2);
   margin-bottom: 15px;
 }
 
@@ -893,13 +903,13 @@ footer {
 }
 
 .footer-col ul li a {
-  color: #ccc;
+  color: var(--text-color1);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: #d4af37;
+  color: var(--text-color2);
 }
 
 .redes-sociales {
@@ -935,9 +945,10 @@ footer {
   margin-top: 30px;
   padding-top: 15px;
   font-size: 0.85rem;
-  color: #888;
+  color: var(--text-color1);
 }
 
 .footer-col p {
+  color: var(--text-color1);
   margin-top: 20px;
 }
