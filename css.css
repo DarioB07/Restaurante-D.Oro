@@ -6,6 +6,7 @@
   --text-color2: rgb(212, 175, 55);/*Nueva var()*/
   --text-size: 42px;
   --subtitle: 20px;
+  --padding: 18px
 }
 
 * {
@@ -38,7 +39,7 @@ html {
 }
 
 .nav-menu a {
-  color: white;
+  color: var(--text-color1);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -318,7 +319,7 @@ body {
 
 .modal-content {
   color: #000;
-  background: #fff;
+  background: var(--text-color2);
   margin: 10% auto;
   padding: 15px;
   width: 40%;
@@ -407,7 +408,7 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(128, 125, 125, 0.931);
+  background: rgba(255, 255, 255, 0.931);
 }
 
 /* Responsive nav */
@@ -569,6 +570,7 @@ nav a:hover {
 }
 
 .section {
+  padding: var(--padding);
   background-color: #a88c7d;
 }
 .section h3 {
@@ -593,7 +595,7 @@ h2 {
 }
 
 .menu-header h4 {
-  color: #ffffff;
+  color: var(--text-color2);
   font-size: var(--text-size);
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -700,7 +702,7 @@ p.subtitulo {
 }
 
 .galeria-container {
-  padding: 30px;
+  padding: var(--padding);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
@@ -855,9 +857,9 @@ iframe {
 /* Footer */
 
 footer {
-  background: #000;
+  background: #ad9159;
   color: #fff;
-  padding: 50px 20px 20px;
+  padding: var(--padding);
 }
 
 .footer-container {
@@ -899,7 +901,7 @@ footer {
 }
 
 .footer-col ul li a {
-  color: #ccc;
+  color: var(--text-color1);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -941,9 +943,10 @@ footer {
   margin-top: 30px;
   padding-top: 15px;
   font-size: 0.85rem;
-  color: #888;
+  color: var(--text-color1);
 }
 
 .footer-col p {
+  color: var(--text-color1);
   margin-top: 20px;
 }
