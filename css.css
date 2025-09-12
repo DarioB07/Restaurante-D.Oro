@@ -1,5 +1,7 @@
 :root {
-  --texto-titulos: 40px;
+  --title-text: 40px;
+  --main-color: gold;
+  --background: #b32d2d;
 }
 
 * {
@@ -39,7 +41,7 @@ html {
 }
 
 .nav-menu a:hover {
-  color: gold;
+  color: var(--main-color);
 }
 
 /* Hamburguesa */
@@ -50,7 +52,7 @@ html {
 }
 
 .hamburger span {
-  background: #b38e2d;
+  background: var(--background);
   height: 5px;
   width: 25px;
   margin: 4px 0;
@@ -63,7 +65,7 @@ html {
   .nav-menu {
     display: none;
     flex-direction: column;
-    background: #b38e2d;
+    background: var(--background);
     position: absolute;
     top: 70px; /* se despliega debajo del header */
     width: 20%;
@@ -186,11 +188,11 @@ header.scrolled {
   padding: 20px;
   flex-wrap: wrap;
   gap: 15px;
-  background-color: #b38e2d;
+  background-color: var(--background);
 }
 .card {
   width: 250px;
-  background-color: #b38e2d;
+  background-color: var(--background);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -217,7 +219,7 @@ body {
   font-family: Arial, sans-serif;
 }
 .cards {
-  background-color: #b38e2d;
+  background-color: var(--background);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -575,7 +577,7 @@ h2 {
   text-align: center;
 }
 .menu-section {
-  background: linear-gradient(90deg, #b38e2d);
+  background: linear-gradient(90deg, var(--background));
   color: #fff;
   padding: 80px 20px;
   text-align: center;

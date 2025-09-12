@@ -96,7 +96,6 @@ cardsContainer.innerHTML = platos.map(plato => {
 //   <img id="1" src="./img/doro.png" alt="Dario" class="card-img" onclick=openInfoModal(1)>
 // `
 
-//Cerrar modal
 function closeInfoModal() {
   document.getElementById("infoModal").style.display = "none";
 }
