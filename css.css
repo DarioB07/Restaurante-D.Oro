@@ -2,6 +2,7 @@
   --title-text: 40px;
   --main-color: gold;
   --background: #b32d2d;
+  --text-color1: #fff; 
 }
 
 * {
@@ -578,7 +579,7 @@ h2 {
 }
 .menu-section {
   background: linear-gradient(90deg, var(--background));
-  color: #fff;
+  color: var(--text-color1);
   padding: 80px 20px;
   text-align: center;
 }
