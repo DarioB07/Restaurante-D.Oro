@@ -6,7 +6,9 @@
   --text-color2: rgb(212, 175, 55);/*Nueva var()*/
   --text-size: 42px;
   --subtitle: 20px;
-  --padding: 18px
+  --padding: 18px;
+  --overlay: 20px;
+  --overlay2: 15px;
 }
 
 * {
@@ -319,7 +321,7 @@ body {
 
 .modal-content {
   color: #000;
-  background: var(--text-color2);
+  background: #e6c762;
   margin: 10% auto;
   padding: 15px;
   width: 40%;
@@ -749,12 +751,12 @@ p.subtitulo {
 
 .overlay h4 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--overlay);
   color: var(--text-color2);
 }
 
 .overlay p {
-  font-size: 1rem;
+  font-size: var(--overlay2);
   color: #fff;
   margin-top: 5px;
 }
